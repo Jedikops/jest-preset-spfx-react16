@@ -19,6 +19,7 @@
   ],
   "moduleNameMapper": {
     "\\.(css|scss)$": "identity-obj-proxy",
+    "office-ui-fabric-react/lib/(.*)$": "office-ui-fabric-react/lib-commonjs/$1",
     "^resx-strings/en-us.json": "<rootDir>/../node_modules/@microsoft/sp-core-library/lib/resx-strings/en-us.json"
   },
   "setupFiles": [
@@ -35,5 +36,8 @@
   "testURL": "http://localhost",
   "transform": {
     "^.+\\.(ts|tsx)$": "ts-jest"
-  }
+  },
+   "transformIgnorePatterns": [
+    "\\node_modules\\office-ui-fabric-react\\(\\w)*"
+  ]
 }
